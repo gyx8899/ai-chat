@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="100" cy="100" r="90" fill="#24292f" />
+
+  <!-- 居中横宽对话气泡，位置上移居中 -->
+  <path d="M48 60 C48 51.1634 55.1634 44 64 44 H136 C144.837 44 152 51.1634 152 60 V108 C152 116.837 144.837 124 136 124 H92 L78 138 V124 H64 C55.1634 124 48 116.837 48 108 V60 Z" fill="#ffffff" />
+
+  <!-- 居中排列的代码横线 -->
+  <path d="M66 68 L134 68" stroke="#24292f" stroke-width="4" stroke-linecap="round" />
+  <path d="M66 86 L134 86" stroke="#24292f" stroke-width="4" stroke-linecap="round" />
+  <path d="M66 104 L106 104" stroke="#24292f" stroke-width="4" stroke-linecap="round" />
+</svg>

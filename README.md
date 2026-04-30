@@ -1,6 +1,18 @@
 # AI Chat Demo
 
+🌐 **在线体验**: [https://gyx8899.github.io/ai-chat/](https://gyx8899.github.io/ai-chat/)
+
 AI 对话应用 Demo，演示 SSE 流式输出、模拟 RAG 检索、多会话管理、历史记忆等核心架构与技术方案。
+
+## 界面预览
+
+| 蓝色主题（中文） | 绿色暗色主题（中文） | 浅色主题（英文） |
+|----------------|---------------------|----------------|
+| ![蓝色主题（中文）](client/public/screenshot-blue-zh.png) | ![绿色暗色主题（中文）](client/public/screenshot-green-zh-dark.png) | ![浅色主题（英文）](client/public/screenshot-origin-en.png) |
+
+| 移动端主界面 | 移动端侧边栏 |
+|--------------|--------------|
+| ![移动端主界面](client/public/mobile-main.png) | ![移动端侧边栏](client/public/mobile-sidebar.png) |
 
 ## 功能特性
 
