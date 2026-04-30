@@ -1,0 +1,49 @@
+{
+  "name": "ai-chat-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "_check-node": "nvm use 20 || true",
+    "dev": "npm run _check-node && concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run _check-node && cd server && npm run dev",
+    "dev:client": "npm run _check-node && cd client && npm run dev",
+    "install:all": "npm run _check-node && npm install && cd shared && npm install && cd ../server && npm install && cd ../client && npm install",
+    "build:shared": "npm run _check-node && cd shared && npm run build",
+    "build:frontend": "npm run _check-node && npm run build:shared && cd client && npm run build",
+    "build:static": "npm run _check-node && npm run build:shared && cd client && npm run build:static",
+    "lint": "npm run _check-node && cd shared && npx eslint . && cd ../client && npm run lint && cd ../server && npx eslint .",
+    "lint:fix": "npm run _check-node && cd shared && npx eslint . --fix && cd ../client && npm run lint:fix && cd ../server && npx eslint . --fix",
+    "format": "npm run _check-node && prettier --write \"shared/src/**/*.{ts,tsx}\" \"client/src/**/*.{ts,tsx,css,json}\" \"server/**/*.js\"",
+    "format:check": "npm run _check-node && prettier --check \"shared/src/**/*.{ts,tsx}\" \"client/src/**/*.{ts,tsx,css,json}\" \"server/**/*.js\"",
+    "type-check": "npm run _check-node && cd shared && npm run type-check && cd ../client && npx tsc --noEmit",
+    "test:all": "npm run _check-node && cd shared && npm test && cd ../client && npm test && cd ../server && npm test",
+    "deploy:frontend": "npm run _check-node && cd client && npm run deploy",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "lint-staged": {
+    "client/src/**/*.{ts,tsx}": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write"
+    ],
+    "shared/src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "server/**/*.js": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write"
+    ],
+    "**/*.{json,md,yml,yaml,css}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.5.3"
+  }
+}

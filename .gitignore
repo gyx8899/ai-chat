@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+client/dist/
+
+# Environment variables (sensitive)
+.env
+.env.local
+.env.*.local
+server/.env
+
+# SQLite database (runtime data)
+server/data/chat.db
+server/data/chat.db-shm
+server/data/chat.db-wal
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+**/coverage/
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.sw?

@@ -1,0 +1,7 @@
+node_modules/
+.env
+
+# SQLite runtime data
+data/chat.db
+data/chat.db-shm
+data/chat.db-wal
