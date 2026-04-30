@@ -44,7 +44,8 @@
   },
   "peerDependencies": {
     "clsx": ">=2.0.0",
-    "react": ">=18.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "tailwind-merge": ">=2.0.0"
   },
   "devDependencies": {

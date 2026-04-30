@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, './src'),
         '@shared': path.resolve(__dirname, '../shared/src'),
       },
+      dedupe: ['react', 'react-dom'],
     },
     server: {
       port: Number(env.VITE_PORT) || 5173,
@@ -23,6 +24,10 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    optimizeDeps: {
+      include: ['react', 'react-dom'],
+    },
+    // base: isStatic ? '/client/dist/' : '/',
     base: isStatic ? '/ai-chat/' : '/',
   }
 })
