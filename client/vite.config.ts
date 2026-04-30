@@ -23,6 +23,6 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    base: isStatic ? '/ai/' : '/',
+    base: isStatic ? '/ai-chat/' : '/',
   }
 })
